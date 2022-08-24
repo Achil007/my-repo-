@@ -1,0 +1,116 @@
+.card-body{
+    display: flex;
+    justify-content: space-around;
+}
+.price{
+    display: flex;
+    justify-content: space-around;
+}
+
+.but{
+    display: flex;
+    justify-content: space-around;
+}
+.plus{
+    background-color: rgb(75, 181, 67)
+}
+.minus{
+    background-color: red
+}
+
+.container{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    margin: 0;
+
+}
+
+.heart{
+    background: gray;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    cursor: pointer;
+
+}
+.heart.fill-color{
+    background-color: red;
+}
+.heart::after{
+    background: inherit;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 0;
+    height: 50px;
+    width: 50px;
+}
+.heart::before{
+    background: inherit;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50%;
+    height: 50px;
+
+    width: 50px;
+}
+.animation-heart{
+    position: absolute;
+    
+    
+    
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    transform: rotate(-45deg);
+    
+    cursor: pointer;
+    
+    visibility: hidden;
+}
+.animation-heart.animation{
+    position:relative;
+    
+    animation: popup .8s linear;
+    visibility: visible;
+}
+.animation-heart::after{
+    position: absolute;
+    content: '';
+    height: 50px;
+    width: 50px;
+    top: -50%;
+    right: 0;
+    background: inherit;
+    border-radius: 50%;
+
+}
+.animation-heart::before{
+    
+    position: absolute;
+    content: '';
+    height: 50px;
+    width: 50px;
+    top: 0;
+    right: -50%;
+    background: inherit;
+    border-radius: 50%;
+
+}
+@keyframes popup{
+    100% {
+        transform: scale(1.5) rotate(-45deg);
+        opacity: 0;
+    }
+}
+body{
+    display: flex;
+    justify-content: space-between;
+}
